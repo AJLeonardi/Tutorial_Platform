@@ -23,6 +23,9 @@ Current Server Side Arch:
 - PHP to query DB with passed params
 - PHP creates and returns XML as a response
 
+
+##### Need to turn below into Issues in GitHub  #######
+
 To Dos:
 - CLEAN UP CODE like whoa
 - End User:
