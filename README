@@ -1,0 +1,51 @@
+This code encompasses two Chrome Extensions:
+1.) an extension which allows you to create jQuery Tours/Tutorials for any website (stored on a hosted server)
+2.) an extension which shows whether there are any tutorials for the site you're viewing, if so, you can choose one and take it
+
+This also has the server-side code available.
+
+See the documentation for set up details.
+
+Current support end user side:
+-  popovers on elements which have IDs
+-  modal windows that display hosted content: e.g. youtube videos, or links to html documents
+-  css changes to elements which have IDs
+
+Current support author side:
+- add popovers to <a> elements which have IDs
+- add pre-defined css classes to <a> elements which have IDs
+- add modal window which display hosted content: e.g. youtube videos, or links to html documents, or straight text
+	- to do this, you'll have to select a highlighted <a> element -- no change will be made to that element in the case of a modal window (it's just a way to get to the popup)
+- define title in Header, and also "quit" which refreshes screen
+
+Current Server Side Arch:
+- one table in MySQL server
+- PHP to query DB with passed params
+- PHP creates and returns XML as a response
+
+To Dos:
+- CLEAN UP CODE like whoa
+- End User:
+	- clean up popup.html //in progress -- should probably have more data about tutorials -- like description, author, etc...
+		- possibly get rid of the popup.html entirely, and do it more like the evernote extension.
+
+- Author Side:
+	- add support for elements that do not have IDs -- need to be able to uniquely Select an element based on info from the DB -- Currently this isn't working for undefined IDs (see El Universal -- getting #Undefined as a selector)
+		- currently have implemented the ":contains()" selector to do this a bit. need to make it smarter though.
+	- clean up User Interaction to add modal window
+	- make better tutorial authoring tool -- so can view tutorial "tree" and re-organize steps -- keep track of steps with multiple items (e.g. a css change and a popover).
+	- landing page where user can Test/Edit Existing tutorials, and another option to add new (so they don't have to have two extensions installed)
+	- change background page to event page: https://developer.chrome.com/extensions/event_pages.html
+	- assemble the tutorial on client instead of adding each step to the DB immediately. Store it, and post it all in one go when user hits "save" or something.
+
+- Server Side:
+	- Create JSON api instead of XML 
+	- possibly create more robust DB structure
+	- get tutorial needs to get by name AND url!!! (otherwise can't have tutorials with same name on different urls)
+- General:
+	- CSS Themes for tutorials themselves
+	- create non-stolen icons
+	- Parameterize things like Server Address, so that you don't need to dive into the code to make many changes.
+	- Parameterize the server side info -- DB name/pw/etc??
+- Bugs:
+	- intermittent issue where submit step to DB with "order" value "0" -- which breaks the tutorial at that point.

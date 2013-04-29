@@ -1,0 +1,25 @@
+{
+  "name": "Hosted Tutorial Authoring Tool",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Use this to create a jQuery tutorial that is hosted on your server for others to use",
+  "background": {"page":"background.html"},
+
+  "permissions": [
+  	"storage",
+  	"tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts":[
+  {
+  	"matches":["http://x/x"],
+  	"js":["jquery.js"]
+  }
+  ],  
+  "browser_action": {
+    "default_icon": "icon.jpg",
+    "default_title": "Hosted Tutorial Authoring Tool",
+    "name": "click to author a tutorial"
+  }
+}

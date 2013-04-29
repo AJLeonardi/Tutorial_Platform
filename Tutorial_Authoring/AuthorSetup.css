@@ -1,0 +1,117 @@
+.tutorialHighlight{
+	background: yellow;
+	border: 5px dotted #81f254;
+}
+
+
+.modal-popup{
+	display:none;
+	font-family: georgia, "times new roman", times, serif;
+	background: #333;
+	border: 2px solid #ddd;
+	float: left;
+	font-size: 1.2em;
+	color: white;
+	position: fixed;
+	top: 50%; left: 50%;
+	z-index: 99999;
+	box-shadow: 0px 0px 20px #999; /* CSS3 */
+        -moz-box-shadow: 0px 0px 20px #999; /* Firefox */
+        -webkit-box-shadow: 0px 0px 20px #999; /* Safari, Chrome */
+	border-radius:3px 3px 3px 3px;
+        -moz-border-radius: 3px; /* Firefox */
+        -webkit-border-radius: 3px; /* Safari, Chrome */
+ width:600px;
+  height: 355px;
+	/*overflow: scroll; */
+}
+.modal-contents{
+	display:none;
+	background: #333;
+	padding: 10px; 	
+	float: left;
+	font-size: 1.2em;
+	color: white;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	z-index: 999998;
+}
+
+.modal-contents h3{
+	color:white;
+}
+
+.modal-label{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.modal-contents table{
+	color: white;
+}
+.modal-contents td{
+	padding:2px;
+	margin: 5px;
+}
+
+.modal-nav{
+	display:none;
+	background: #333;
+
+	border-top: 2px solid #ddd;
+	float: left;
+	font-size: 1.2em;
+	color: white;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	z-index: 999999;
+	width: 100%;
+}
+.modal-nav tr{
+	display: block;
+	padding: 10px;
+}
+
+.tutorial-header{
+	display: block;
+	position: relative;
+	color: white;
+	top: 0px;
+	width: 95%;
+	height: 35px;
+	margin: auto;
+	background: #333;
+	border-top: 2px solid #ddd;
+		box-shadow: 20px 0px 20px #999; /* CSS3 */
+        -moz-box-shadow: 20px 0px 20px #999; /* Firefox */
+        -webkit-box-shadow: 20px 0px 20px #999; /* Safari, Chrome */
+	border-radius:3px 3px 3px 3px;
+        -moz-border-radius: 3px; /* Firefox */
+        -webkit-border-radius: 3px; /* Safari, Chrome */
+    z-index: 50099999999999999999;
+}
+.keep_in_view{
+	position: fixed;
+	z-index: 50099999999999999999;
+	top:0px;
+	margin: auto;
+	left: 0;
+	right: 0;
+
+}
+
+#mask {
+	display: none;
+	background: #000; 
+	position: fixed; left: 0; top: 0; 
+	z-index: 10;
+	width: 100%; height: 100%;
+	opacity: 0.8;
+	z-index: 999;
+}
+.disabled_input{
+	background-color: #D6D6D6;
+	font-style: italic;
+}

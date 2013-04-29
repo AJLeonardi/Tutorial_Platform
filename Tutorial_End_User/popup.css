@@ -1,0 +1,17 @@
+BODY{
+	background-attachment: fixed;
+	background-color: #F2F5FA;
+}
+a{
+	color:#5C5755;
+	font-style: none;
+	text-decoration: none;
+	-webkit-transition:color .2s linear;
+	-moz-transition:color .2s linear;
+	-o-transition:color .2s linear;
+}
+a:hover{
+		color: #CF5335;
+}
+
+
